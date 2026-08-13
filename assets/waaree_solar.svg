@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 130" width="100%" height="100%">
+  <!-- "WAAREE" Italicized Green Text -->
+  <g transform="skewX(-12)">
+    <text x="15" y="52" fill="#00A651" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="52" letter-spacing="-1">WAAREE</text>
+    <!-- Underline under WAAREE -->
+    <rect x="15" y="58" width="260" height="6" fill="#00A651"/>
+  </g>
+  <!-- Registered Circle R -->
+  <text x="285" y="24" fill="#00A651" font-family="sans-serif" font-size="14" font-weight="bold">®</text>
+
+  <!-- "SOLAR" Italicized Orange Text -->
+  <g transform="skewX(-12)">
+    <text x="25" y="112" fill="#FF5500" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="46" letter-spacing="1">SOLAR</text>
+  </g>
+</svg>
