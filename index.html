@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fi Patel Electricals | Authorized Solar Rooftop Dealer Himmatnagar</title>
-  <meta name="description" content="Fi Patel Electricals - Premium Solar Rooftop Dealer in Himmatnagar. Authorized for Adani, WAAREE & Citizen Solar panels. 0 Down Payment easy bank loan EMI & Approx. ₹74,000 subsidy estimator.">
+  <meta name="description" content="Fi Patel Electricals - Premium Solar Rooftop Dealer in Himmatnagar. Authorized for Adani, WAAREE & Citizen Solar panels. 0 Down Payment easy bank loan EMI & Up to ₹78,000 PM Surya Ghar subsidy.">
   <meta name="keywords" content="Fi Patel Electricals, Solar Himmatnagar, Solar Rooftop Gujarat, Adani Solar, WAAREE Solar, Citizen Solar, 0 down payment solar loan, solar installer Himmatnagar">
   <meta name="author" content="Fi Patel Electricals">
 
@@ -35,7 +35,7 @@
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- Floating WhatsApp Button (Bottom-Right) -->
+  <!-- Floating WhatsApp Button (Desktop only - Hidden on Mobile to avoid bar clash) -->
   <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop." target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -189,10 +189,10 @@
       <div class="section-header">
         <span class="section-tag">SMART SOLAR CALCULATOR</span>
         <h2 class="section-title">Solar Savings & EMI Estimator</h2>
-        <p class="section-subtitle">Select your monthly bill to calculate system size, savings & bank EMI</p>
+        <p class="section-subtitle">Select your preferred brand package or monthly electricity bill</p>
       </div>
 
-      <!-- #5: Before & After Comparison (tighter on mobile) -->
+      <!-- Before & After Comparison -->
       <div class="bill-comparison-bar">
         <div class="comp-card before">
           <div class="comp-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
@@ -211,6 +211,23 @@
         </div>
       </div>
 
+      <!-- Brand Quick Select Pills -->
+      <div class="brand-select-container">
+        <div class="brand-select-label">Choose Solar Package:</div>
+        <div class="brand-select-pills">
+          <button type="button" class="brand-select-pill active" data-brand="adani">
+            <span class="pill-badge">Popular</span>
+            <strong>Adani / Waaree</strong>
+            <span class="pill-spec">3.24 kW (Net ₹77k)</span>
+          </button>
+          <button type="button" class="brand-select-pill" data-brand="citizen">
+            <span class="pill-badge green-badge">Best Value</span>
+            <strong>Citizen Solar</strong>
+            <span class="pill-spec">3.30 kW (Net ₹65k)</span>
+          </button>
+        </div>
+      </div>
+
       <div class="calc-card">
         <div class="calc-controls">
           <div class="form-group">
@@ -219,49 +236,56 @@
               <span class="val-display" id="billValueDisplay">₹3,500</span>
             </label>
             <input type="range" id="monthlyBillInput" min="1000" max="40000" step="500" value="3500">
+            <div class="range-labels">
+              <span>₹1,000</span>
+              <span>₹20,000</span>
+              <span>₹40,000+</span>
+            </div>
           </div>
 
-          <div style="background: #fbfbfb; padding: 16px; border-radius: 14px; border: 1.5px solid #e2e8f0;">
-            <p style="font-size: 0.85rem; color: #d97706; font-weight: 800; margin-bottom: 6px;">
-              *Approx. ₹74,000 max subsidy (govt scheme rules)*
-            </p>
-            <ul style="font-size: 0.8rem; color: #64748b; padding-left: 16px;">
-              <li>0 Down Payment Bank Loan Available</li>
-              <li>Save up to 88-90% on bills</li>
-              <li>25 Years Panel Warranty</li>
+          <div class="calc-subsidy-alert">
+            <div class="subsidy-alert-header">
+              <i class="fa-solid fa-circle-check"></i>
+              <strong>PM Surya Ghar: ₹78,000 Subsidy</strong>
+            </div>
+            <ul class="calc-subsidy-list">
+              <li>0 Down Payment Easy Bank Loan EMI</li>
+              <li>Save up to 88%–92% on Electricity Bills</li>
+              <li>25 Years Performance Warranty on Tier-1 Panels</li>
             </ul>
           </div>
         </div>
 
         <div class="calc-summary-box">
-          <div>
+          <div class="calc-results-list">
             <div class="calc-result-row">
               <span>Solar Capacity:</span>
-              <strong id="kwOutput">3 kW</strong>
+              <strong id="kwOutput">3.24 kW</strong>
             </div>
             <div class="calc-result-row">
               <span>System Cost:</span>
-              <strong id="totalCostOutput">₹1,35,000</strong>
+              <strong id="totalCostOutput">₹1,55,000</strong>
             </div>
             <div class="calc-result-row">
-              <span>Govt Subsidy*:</span>
-              <strong id="subsidyOutput" style="color: #10b981;">- ₹74,000*</strong>
+              <span>Govt Subsidy:</span>
+              <strong id="subsidyOutput" style="color: #10b981;">- ₹78,000*</strong>
             </div>
             <div class="calc-result-row highlight-row">
-              <span>Net Price*:</span>
-              <strong id="netCostOutput">₹61,000*</strong>
+              <span>Net Price (After Subsidy):</span>
+              <strong id="netCostOutput">₹77,000*</strong>
             </div>
           </div>
 
-          <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,0.2);">
+          <div class="calc-savings-box">
             <div class="calc-result-row">
-              <span>Monthly Savings:</span>
-              <strong id="savingsOutput" style="color: #4ade80;">₹3,080/mo</strong>
+              <span>Estimated Bill Savings:</span>
+              <strong id="savingsOutput" style="color: #4ade80;">₹3,500 / mo</strong>
             </div>
-            <div class="calc-result-row">
-              <span>Bank EMI (0 Down):</span>
-              <strong id="emiOutput" style="color: #fbbf24;">₹1,208/mo</strong>
+            <div class="calc-result-row emi-highlight-row">
+              <span>Bank EMI (0 Down Payment):</span>
+              <strong id="emiOutput" style="color: #fbbf24;">₹1,800 - ₹3,500 / mo*</strong>
             </div>
+            <div class="emi-footnote">*Bank EMI tenure & interest as per bank decision / guidelines</div>
           </div>
         </div>
       </div>
@@ -312,55 +336,95 @@
     </div>
   </section>
 
-  <!-- 5. Media Showcase (#3: Gallery → Horizontal Swipe Carousel on Mobile) -->
+  <!-- 5. Media Showcase (Unique One-by-One Animated Photo Showcase) -->
   <section class="section-padding sectors-bg" id="media-showcase">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">OUR WORK</span>
+        <span class="section-tag">OUR FEATURED PROJECTS</span>
         <h2 class="section-title">Completed Solar Installations</h2>
-        <p class="section-subtitle">Real site photography demonstrating our quality engineering</p>
+        <p class="section-subtitle">Real site photography demonstrating our premium quality engineering</p>
       </div>
 
-      <!-- Horizontal Scroll-Snap Gallery -->
-      <div class="gallery-scroll-track">
-        <div class="gallery-card">
-          <div class="gallery-img-wrapper">
-            <img src="assets/gallery_roof_sun.jpg" alt="Rooftop Solar Installation" loading="lazy">
+      <!-- One-by-One Animated Photo Showcase Stage -->
+      <div class="work-showcase-container" id="workShowcase">
+        <!-- Progress Bar Indicator -->
+        <div class="showcase-progress-bar"><div class="showcase-progress-fill" id="showcaseProgress"></div></div>
+
+        <!-- Main Active Slide Display Stage -->
+        <div class="work-stage" id="workStage">
+          <!-- Slide 1 -->
+          <div class="work-slide active" data-index="0">
+            <img src="assets/gallery_roof_sun.jpg" alt="Residential Rooftop Solar Project" loading="lazy">
+            <div class="work-slide-overlay">
+              <span class="work-tag"><i class="fa-solid fa-house-solar"></i> Residential • 3.24 kW</span>
+              <h3>Residential Rooftop Solar System</h3>
+              <p>High-efficiency Tier-1 Mono PERC panels generated under peak solar radiation in Himmatnagar.</p>
+            </div>
           </div>
-          <div class="gallery-card-caption">
-            <h4>Residential Rooftop</h4>
-            <p>Solar panels under peak radiation</p>
+
+          <!-- Slide 2 -->
+          <div class="work-slide" data-index="1">
+            <img src="assets/gallery_engineer_install.png" alt="Certified Solar Mounting Installation" loading="lazy">
+            <div class="work-slide-overlay">
+              <span class="work-tag"><i class="fa-solid fa-user-shield"></i> Engineering • Certified</span>
+              <h3>Precision Engineering & Mounting</h3>
+              <p>Hot-dip galvanized structure with storm-resistant mounting by expert technicians.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="work-slide" data-index="2">
+            <img src="assets/gallery_solar_farm.jpg" alt="Solar Agriculture Farm" loading="lazy">
+            <div class="work-slide-overlay">
+              <span class="work-tag"><i class="fa-solid fa-tractor"></i> Agriculture • 10 kW</span>
+              <h3>Ground-Mounted Solar Pump & Farm</h3>
+              <p>Continuous off-grid & grid-tied solar power generation for agricultural tube-wells.</p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="work-slide" data-index="3">
+            <img src="assets/gallery_solar_carport.jpg" alt="Commercial Solar Carport" loading="lazy">
+            <div class="work-slide-overlay">
+              <span class="work-tag"><i class="fa-solid fa-square-parking"></i> Commercial • 15 kW</span>
+              <h3>Solar Parking & Carport Canopy</h3>
+              <p>Dual-purpose shaded parking space generating green energy for commercial premises.</p>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="work-slide" data-index="4">
+            <img src="assets/solar_rooftop_res.jpg" alt="High Capacity Rooftop Solar Array" loading="lazy">
+            <div class="work-slide-overlay">
+              <span class="work-tag"><i class="fa-solid fa-city"></i> Industrial • 25 kW</span>
+              <h3>Industrial Rooftop Installation</h3>
+              <p>Industrial scale net-metering project engineered for zero bill operation.</p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="gallery-card">
-          <div class="gallery-img-wrapper">
-            <img src="assets/gallery_engineer_install.png" alt="Solar Engineer Installing Panels" loading="lazy">
-          </div>
-          <div class="gallery-card-caption">
-            <h4>Certified Installation</h4>
-            <p>Mono PERC panel mounting</p>
-          </div>
+      <!-- One-by-One Thumbnail Bar Selection -->
+      <div class="work-thumbnails-strip" id="workThumbnails">
+        <div class="thumb-item active" data-index="0">
+          <img src="assets/gallery_roof_sun.jpg" alt="Thumb 1">
+          <span>Residential</span>
         </div>
-
-        <div class="gallery-card">
-          <div class="gallery-img-wrapper">
-            <img src="assets/gallery_solar_farm.jpg" alt="Solar Farm System" loading="lazy">
-          </div>
-          <div class="gallery-card-caption">
-            <h4>Solar Agriculture</h4>
-            <p>Ground-mounted solar farm</p>
-          </div>
+        <div class="thumb-item" data-index="1">
+          <img src="assets/gallery_engineer_install.png" alt="Thumb 2">
+          <span>Mounting</span>
         </div>
-
-        <div class="gallery-card">
-          <div class="gallery-img-wrapper">
-            <img src="assets/gallery_solar_carport.jpg" alt="Solar Carport Parking" loading="lazy">
-          </div>
-          <div class="gallery-card-caption">
-            <h4>Solar Carport</h4>
-            <p>Shaded parking with solar roof</p>
-          </div>
+        <div class="thumb-item" data-index="2">
+          <img src="assets/gallery_solar_farm.jpg" alt="Thumb 3">
+          <span>Agriculture</span>
+        </div>
+        <div class="thumb-item" data-index="3">
+          <img src="assets/gallery_solar_carport.jpg" alt="Thumb 4">
+          <span>Carport</span>
+        </div>
+        <div class="thumb-item" data-index="4">
+          <img src="assets/solar_rooftop_res.jpg" alt="Thumb 5">
+          <span>Industrial</span>
         </div>
       </div>
 

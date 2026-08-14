@@ -1,2 +1,4 @@
 .gemini/
 *.log
+
+.vercel

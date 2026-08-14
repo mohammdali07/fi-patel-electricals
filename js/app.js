@@ -150,6 +150,116 @@ function initInquiryForm() {
   }
 }
 
+// Unique One-by-One Photo Showcase Controller
+function initWorkShowcase() {
+  const slides = document.querySelectorAll('#workStage .work-slide');
+  const thumbs = document.querySelectorAll('#workThumbnails .thumb-item');
+  const prevBtn = document.getElementById('workPrevBtn');
+  const nextBtn = document.getElementById('workNextBtn');
+  const counter = document.getElementById('workCounter');
+  const progressBar = document.getElementById('showcaseProgress');
+  const container = document.getElementById('workShowcase');
+
+  if (!slides || slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoTimer = null;
+  let progressTimer = null;
+  let progressWidth = 0;
+  const DURATION = 4500; // ms per slide
+  const INTERVAL = 50;
+
+  function updateSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    thumbs.forEach(thumb => thumb.classList.remove('active'));
+
+    currentIndex = ((index % slides.length) + slides.length) % slides.length;
+
+    slides[currentIndex].classList.add('active');
+    if (thumbs[currentIndex]) {
+      thumbs[currentIndex].classList.add('active');
+      thumbs[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    if (counter) {
+      const currentFormatted = String(currentIndex + 1).padStart(2, '0');
+      const totalFormatted = String(slides.length).padStart(2, '0');
+      counter.textContent = `${currentFormatted} / ${totalFormatted}`;
+    }
+
+    resetProgressBar();
+  }
+
+  function resetProgressBar() {
+    progressWidth = 0;
+    if (progressBar) progressBar.style.width = '0%';
+  }
+
+  function startProgress() {
+    stopProgress();
+    progressTimer = setInterval(() => {
+      progressWidth += (INTERVAL / DURATION) * 100;
+      if (progressBar) progressBar.style.width = Math.min(progressWidth, 100) + '%';
+      if (progressWidth >= 100) {
+        nextSlide();
+      }
+    }, INTERVAL);
+  }
+
+  function stopProgress() {
+    if (progressTimer) clearInterval(progressTimer);
+  }
+
+  function nextSlide() {
+    updateSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    updateSlide(currentIndex - 1);
+  }
+
+  // Event Listeners
+  if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startProgress(); });
+  if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startProgress(); });
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const idx = parseInt(thumb.getAttribute('data-index')) || 0;
+      updateSlide(idx);
+      startProgress();
+    });
+  });
+
+  // Touch Swipe for Mobile
+  if (container) {
+    let startX = 0;
+    let endX = 0;
+
+    container.addEventListener('touchstart', (e) => {
+      startX = e.changedTouches[0].screenX;
+      stopProgress();
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].screenX;
+      const diff = startX - endX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+      }
+      startProgress();
+    }, { passive: true });
+
+    // Hover Pause (Desktop)
+    container.addEventListener('mouseenter', stopProgress);
+    container.addEventListener('mouseleave', startProgress);
+  }
+
+  // Initial Boot
+  updateSlide(0);
+  startProgress();
+}
+
 // Navbar Scroll Shadow & Back To Top Button
 function initScrollFeatures() {
   const navbar = document.getElementById('navbar');
@@ -184,8 +294,10 @@ function initScrollFeatures() {
 document.addEventListener('DOMContentLoaded', () => {
   initPageLoader();
   initHeroSlideshow();
+  initWorkShowcase();
   init3DScrollObserver();
   initMobileMenu();
   initInquiryForm();
   initScrollFeatures();
 });
+
