@@ -11,6 +11,7 @@ function initSolarCalculator() {
   const subsidyOutput = document.getElementById('subsidyOutput');
   const netCostOutput = document.getElementById('netCostOutput');
   const savingsOutput = document.getElementById('savingsOutput');
+  const roiOutput = document.getElementById('roiOutput');
   const emiOutput = document.getElementById('emiOutput');
   const brandPills = document.querySelectorAll('.brand-select-pill');
 
@@ -34,6 +35,7 @@ function initSolarCalculator() {
         subsidy: 78000,
         netCost: 77000,
         savings: '₹3,500 / mo',
+        roi: '~1.8 Years',
         emi: '₹1,800 - ₹3,500 / mo*'
       });
     } else if (brand === 'citizen') {
@@ -44,6 +46,7 @@ function initSolarCalculator() {
         subsidy: 78000,
         netCost: 65000,
         savings: '₹3,500 / mo',
+        roi: '~1.5 Years',
         emi: '₹1,500 - ₹3,000 / mo*'
       });
     } else {
@@ -58,6 +61,7 @@ function initSolarCalculator() {
     if (subsidyOutput) subsidyOutput.textContent = '- ₹' + data.subsidy.toLocaleString('en-IN') + '*';
     if (netCostOutput) netCostOutput.textContent = '₹' + data.netCost.toLocaleString('en-IN') + '*';
     if (savingsOutput) savingsOutput.textContent = data.savings;
+    if (roiOutput) roiOutput.textContent = data.roi;
     if (emiOutput) emiOutput.textContent = data.emi;
   }
 
@@ -75,6 +79,7 @@ function initSolarCalculator() {
         subsidy: 78000,
         netCost: 77000,
         savings: '₹3,500 / mo',
+        roi: '~1.8 Years',
         emi: '₹1,800 - ₹3,500 / mo*'
       });
       return;
@@ -85,6 +90,7 @@ function initSolarCalculator() {
         subsidy: 78000,
         netCost: 65000,
         savings: '₹3,500 / mo',
+        roi: '~1.5 Years',
         emi: '₹1,500 - ₹3,000 / mo*'
       });
       return;
@@ -111,6 +117,10 @@ function initSolarCalculator() {
     // Monthly Savings (~88% to 92% of power bill)
     const monthlySavings = Math.round(monthlyBill * 0.90);
 
+    // Payback Period (ROI in years)
+    const annualSavings = monthlySavings * 12;
+    const paybackYears = annualSavings > 0 ? (netCost / annualSavings).toFixed(1) : '2.0';
+
     // Bank Loan EMI on Net Cost (approx 7% p.a. over 60 months)
     const monthlyInterestRate = 0.07 / 12;
     const tenureMonths = 60;
@@ -125,6 +135,7 @@ function initSolarCalculator() {
     if (subsidyOutput) subsidyOutput.textContent = '- ₹' + subsidy.toLocaleString('en-IN') + '*';
     if (netCostOutput) netCostOutput.textContent = '₹' + netCost.toLocaleString('en-IN') + '*';
     if (savingsOutput) savingsOutput.textContent = '₹' + monthlySavings.toLocaleString('en-IN') + ' / mo';
+    if (roiOutput) roiOutput.textContent = '~' + paybackYears + ' Years';
     if (emiOutput) emiOutput.textContent = '₹' + emi.toLocaleString('en-IN') + ' / mo*';
   }
 

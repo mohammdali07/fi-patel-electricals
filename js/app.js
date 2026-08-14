@@ -132,7 +132,39 @@ function initMobileMenu() {
   }
 }
 
-// Form Submission Handler (now includes email field)
+// Animated Stat Counters Observer
+function initStatCounters() {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  const section = document.getElementById('statsCounterBar');
+
+  if (!section || !statNumbers || statNumbers.length === 0) return;
+
+  let animated = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !animated) {
+      animated = true;
+      statNumbers.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target')) || 0;
+        const suffix = el.getAttribute('data-suffix') || '';
+        let count = 0;
+        const speed = Math.max(Math.floor(target / 40), 1);
+        const timer = setInterval(() => {
+          count += speed;
+          if (count >= target) {
+            count = target;
+            clearInterval(timer);
+          }
+          el.textContent = count + suffix;
+        }, 30);
+      });
+    }
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+}
+
+// Form Submission Handler (sends direct lead to WhatsApp)
 function initInquiryForm() {
   const form = document.getElementById('inquiryForm');
   const alertBox = document.getElementById('formAlertBox');
@@ -141,17 +173,28 @@ function initInquiryForm() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
+      const name = document.getElementById('formNameInput')?.value || '';
+      const phone = document.getElementById('formPhoneInput')?.value || '';
+      const city = document.getElementById('formCityInput')?.value || '';
+      const email = document.getElementById('formEmailInput')?.value || 'Not provided';
+      const sector = document.getElementById('formSectorSelect')?.value || 'Residential';
+
       if (alertBox) {
         alertBox.style.display = 'block';
         alertBox.style.background = '#d1fae5';
         alertBox.style.color = '#065f46';
-        alertBox.textContent = '✅ Thank you! Our team will contact you shortly.';
+        alertBox.textContent = '✅ Inquiry Submitted! Redirecting to WhatsApp...';
       }
 
-      form.reset();
+      // Build structured WhatsApp message
+      const textMessage = `Hello Fi Patel Electricals,\n\nI want a Solar Rooftop Inquiry:\n• Name: ${name}\n• Mobile: ${phone}\n• City/Area: ${city}\n• Email: ${email}\n• Category: ${sector}`;
+      const waUrl = `https://wa.me/919409264992?text=${encodeURIComponent(textMessage)}`;
+
       setTimeout(() => {
+        window.open(waUrl, '_blank');
+        form.reset();
         if (alertBox) alertBox.style.display = 'none';
-      }, 5000);
+      }, 1200);
     });
   }
 }
@@ -306,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageLoader();
   initHeroSlideshow();
   initWorkShowcase();
+  initStatCounters();
   init3DScrollObserver();
   initMobileMenu();
   initInquiryForm();

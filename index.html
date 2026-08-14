@@ -18,6 +18,9 @@
   <meta property="og:title" content="Fi Patel Electricals | Authorized Solar Rooftop Dealer Himmatnagar">
   <meta property="og:description" content="Go solar with 0 Down Payment & Easy Bank Loan EMI. Authorized dealer for Adani, WAAREE & Citizen Solar panels.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fi-patel-electricals.vercel.app">
+  <meta property="og:image" content="https://fi-patel-electricals.vercel.app/assets/hero_slide_1.jpg">
+  <link rel="canonical" href="https://fi-patel-electricals.vercel.app">
 
   <!-- FontAwesome Icons & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -134,7 +137,7 @@
               <div class="slide" style="background-image: url('assets/hero_slide_2.png');">
                 <div class="hero-slide-info">
                   <span class="slide-badge">Certified Engineering</span>
-                  <h4>Precision Mounting & Mounting</h4>
+                  <h4>Precision Mounting & Wiring</h4>
                 </div>
               </div>
               <div class="slide" style="background-image: url('assets/hero_slide_3.jpg');">
@@ -157,6 +160,7 @@
             </button>
             <button class="hero-arrow-btn next" id="heroSlideNext" aria-label="Next Slide">
               <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
 
@@ -165,24 +169,28 @@
   </section>
 
   <!-- 2. Stats Counter Bar -->
-  <section class="stats-counter-bar">
+  <section class="stats-counter-bar" id="statsCounterBar">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-box">
-          <div class="stat-number">200+</div>
+          <div class="stat-icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <div class="stat-number" data-target="200" data-suffix="+">200+</div>
           <div class="stat-label">Projects Installed</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">88%</div>
+          <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="stat-number" data-target="88" data-suffix="%">88%</div>
           <div class="stat-label">Avg Bill Savings</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">100%</div>
+          <div class="stat-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="stat-number" data-target="100" data-suffix="%">100%</div>
           <div class="stat-label">Loan Approval</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">25+</div>
-          <div class="stat-label">Yrs Warranty</div>
+          <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="stat-number" data-target="25" data-suffix="+ Yrs">25+ Yrs</div>
+          <div class="stat-label">Panel Warranty</div>
         </div>
       </div>
     </div>
@@ -195,12 +203,15 @@
       <div class="partners-grid">
         <div class="partner-logo-card">
           <img src="assets/adani_solar.svg" alt="Adani Solar Official Logo" class="partner-logo-img">
+          <span class="partner-badge"><i class="fa-solid fa-circle-check"></i> Authorized Dealer</span>
         </div>
         <div class="partner-logo-card">
           <img src="assets/waaree_solar.svg" alt="WAAREE Solar Official Logo" class="partner-logo-img">
+          <span class="partner-badge"><i class="fa-solid fa-circle-check"></i> Authorized Dealer</span>
         </div>
         <div class="partner-logo-card">
           <img src="assets/citizen_solar.svg" alt="Citizen Solar Official Logo" class="partner-logo-img">
+          <span class="partner-badge"><i class="fa-solid fa-circle-check"></i> Authorized Dealer</span>
         </div>
       </div>
     </div>
@@ -304,6 +315,10 @@
               <span>Estimated Bill Savings:</span>
               <strong id="savingsOutput" style="color: #4ade80;">₹3,500 / mo</strong>
             </div>
+            <div class="calc-result-row">
+              <span>Estimated Payback (ROI):</span>
+              <strong id="roiOutput" style="color: #60a5fa;">~1.8 Years</strong>
+            </div>
             <div class="calc-result-row emi-highlight-row">
               <span>Bank EMI (0 Down Payment):</span>
               <strong id="emiOutput" style="color: #fbbf24;">₹1,800 - ₹3,500 / mo*</strong>
@@ -332,7 +347,9 @@
           <div class="form-group">
             <input type="tel" id="formPhoneInput" class="form-input" placeholder="Mobile Number" required>
           </div>
-          <!-- #7: Email field added -->
+          <div class="form-group">
+            <input type="text" id="formCityInput" class="form-input" placeholder="City / Area Name (e.g. Himmatnagar)" required>
+          </div>
           <div class="form-group">
             <input type="email" id="formEmailInput" class="form-input" placeholder="Email Address (optional)">
           </div>
@@ -436,6 +453,12 @@
           Your browser does not support HTML5 video playback.
         </video>
       </div>
+
+      <div style="text-align: center; margin-top: 25px;">
+        <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20please%20send%20more%20project%20photos%20and%20videos." target="_blank" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> View More Project Photos & Videos on WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 
@@ -445,7 +468,18 @@
       <div class="section-header">
         <span class="section-tag">CUSTOMER REVIEWS</span>
         <h2 class="section-title">What Our Customers Say</h2>
-        <p class="section-subtitle">Real experiences from solar customers</p>
+        <p class="section-subtitle">Real experiences from solar customers across Sabarkantha</p>
+      </div>
+
+      <!-- Google Rating Header Badge -->
+      <div class="google-rating-banner">
+        <div class="google-rating-content">
+          <i class="fa-brands fa-google google-icon"></i>
+          <div>
+            <strong>4.9 ★★★★★ Rating on Google</strong>
+            <span>Based on 85+ verified solar installation reviews</span>
+          </div>
+        </div>
       </div>
 
       <!-- Horizontal Scroll-Snap Testimonials -->
@@ -488,6 +522,34 @@
             <div>
               <strong>Idar Dairy Co.</strong>
               <span>Industrial, Idar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars-row">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Citizen Solar 3.3 kW installed. Got full ₹78,000 PM Surya Ghar subsidy directly credited! Very honest guidance by Fatehali Bhai."</p>
+          <div class="testimonial-user">
+            <div class="user-avatar">KP</div>
+            <div>
+              <strong>Kiritbhai Patel</strong>
+              <span>Residential, Modasa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars-row">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Ground mounted 10 kW solar pump system for farm tube well. No diesel generator needed now. Saves ₹15,000 every month!"</p>
+          <div class="testimonial-user">
+            <div class="user-avatar">SC</div>
+            <div>
+              <strong>Sureshbhai Chaudhari</strong>
+              <span>Agricultural Farm, Idar</span>
             </div>
           </div>
         </div>
@@ -551,7 +613,7 @@
             </p>
             <div style="display: flex; gap: 16px; margin-top: 8px; font-size: 0.85rem; flex-wrap: wrap;">
               <span style="color: #1d1e38; font-weight: 700;"><i class="fa-solid fa-clock" style="color: #f58220;"></i> Mon–Sat: 9 AM – 7 PM</span>
-              <span style="color: #1d1e38; font-weight: 700;"><i class="fa-solid fa-globe" style="color: #f58220;"></i> FIPATELELECTRICALS.COM</span>
+              <span style="color: #1d1e38; font-weight: 700;"><i class="fa-solid fa-envelope" style="color: #f58220;"></i> fipatelelectricals@gmail.com</span>
             </div>
           </div>
         </div>
@@ -596,9 +658,8 @@
           </p>
           <div class="footer-socials">
             <a href="https://wa.me/919409264992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Google Business"><i class="fa-brands fa-google"></i></a>
+            <a href="tel:9409264992" aria-label="Phone Call"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://maps.google.com/?q=RTO+Chokdi+Himmatnagar+Sabarkantha+Gujarat" target="_blank" aria-label="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
           </div>
         </div>
 
