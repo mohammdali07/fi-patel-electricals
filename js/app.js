@@ -152,6 +152,7 @@ function initInquiryForm() {
 
 // Unique One-by-One Photo Showcase Controller
 function initWorkShowcase() {
+  const stage = document.getElementById('workStage');
   const slides = document.querySelectorAll('#workStage .work-slide');
   const thumbs = document.querySelectorAll('#workThumbnails .thumb-item');
   const prevBtn = document.getElementById('workPrevBtn');
@@ -174,6 +175,11 @@ function initWorkShowcase() {
     thumbs.forEach(thumb => thumb.classList.remove('active'));
 
     currentIndex = ((index % slides.length) + slides.length) % slides.length;
+
+    // Horizontal Swipe Animation
+    if (stage) {
+      stage.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
     slides[currentIndex].classList.add('active');
     if (thumbs[currentIndex]) {
