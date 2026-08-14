@@ -51,6 +51,12 @@ function initHeroSlideshow() {
     });
   });
 
+  // Arrow navigation handlers
+  const prevArrow = document.getElementById('heroSlidePrev');
+  const nextArrow = document.getElementById('heroSlideNext');
+  if (prevArrow) prevArrow.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
+  if (nextArrow) nextArrow.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+
   // Hover pause (desktop)
   if (wrapper) {
     wrapper.addEventListener('mouseenter', stopAutoPlay);

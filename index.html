@@ -113,21 +113,53 @@
           </div>
         </div>
 
-        <!-- #4: Hero Slider with Touch Swipe Support -->
+        <!-- Hero Slider with Touch Swipe & Enhanced Visual Effects -->
         <div class="hero-image-wrapper">
           <div class="hero-slider-wrapper" id="heroSliderWrapper">
+            <!-- Glowing Stat Badge -->
             <div class="hero-photo-stat-pill">
-              <i class="fa-solid fa-certificate" style="color: #f58220;"></i>
+              <span class="pulse-dot"></span>
+              <i class="fa-solid fa-solar-panel" style="color: #f58220;"></i>
               <span>200+ Gujarat Projects</span>
             </div>
 
+            <!-- Slideshow -->
             <div class="hero-slideshow" id="heroSlideshow">
-              <div class="slide active" style="background-image: url('assets/hero_slide_1.jpg');"></div>
-              <div class="slide" style="background-image: url('assets/hero_slide_2.png');"></div>
-              <div class="slide" style="background-image: url('assets/hero_slide_3.jpg');"></div>
-              <div class="slide" style="background-image: url('assets/hero_slide_4.png');"></div>
+              <div class="slide active" style="background-image: url('assets/hero_slide_1.jpg');">
+                <div class="hero-slide-info">
+                  <span class="slide-badge">Residential Project</span>
+                  <h4>Mono PERC Rooftop System</h4>
+                </div>
+              </div>
+              <div class="slide" style="background-image: url('assets/hero_slide_2.png');">
+                <div class="hero-slide-info">
+                  <span class="slide-badge">Certified Engineering</span>
+                  <h4>Precision Mounting & Mounting</h4>
+                </div>
+              </div>
+              <div class="slide" style="background-image: url('assets/hero_slide_3.jpg');">
+                <div class="hero-slide-info">
+                  <span class="slide-badge">Agriculture Solar</span>
+                  <h4>Ground Solar Pump Installation</h4>
+                </div>
+              </div>
+              <div class="slide" style="background-image: url('assets/hero_slide_4.png');">
+                <div class="hero-slide-info">
+                  <span class="slide-badge">Commercial Array</span>
+                  <h4>High-Yield Solar Installation</h4>
+                </div>
+              </div>
             </div>
 
+            <!-- Slide Nav Arrows -->
+            <button class="hero-arrow-btn prev" id="heroSlidePrev" aria-label="Previous Slide">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="hero-arrow-btn next" id="heroSlideNext" aria-label="Next Slide">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Dots Bar -->
             <div class="slider-dots-bar" id="sliderDotsBar">
               <span class="slider-dot active" data-index="0"></span>
               <span class="slider-dot" data-index="1"></span>
