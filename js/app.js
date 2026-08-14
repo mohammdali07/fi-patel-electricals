@@ -184,7 +184,6 @@ function initWorkShowcase() {
     slides[currentIndex].classList.add('active');
     if (thumbs[currentIndex]) {
       thumbs[currentIndex].classList.add('active');
-      thumbs[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
 
     if (counter) {
