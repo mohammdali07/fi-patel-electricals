@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fi Patel Electricals | Authorized Solar Rooftop Dealer Himmatnagar</title>
-  <meta name="description" content="Fi Patel Electricals - Premium Solar Rooftop Dealer in Himmatnagar. Authorized for Adani, WAAREE & Citizen Solar panels. 0 Down Payment easy bank loan EMI & Up to ₹78,000 PM Surya Ghar subsidy.">
-  <meta name="keywords" content="Fi Patel Electricals, Solar Himmatnagar, Solar Rooftop Gujarat, Adani Solar, WAAREE Solar, Citizen Solar, 0 down payment solar loan, solar installer Himmatnagar">
+  <meta name="description"
+    content="Fi Patel Electricals - Premium Solar Rooftop Dealer in Himmatnagar. Authorized for Adani, WAAREE & Citizen Solar panels. 0 Down Payment easy bank loan EMI & Up to ₹78,000 PM Surya Ghar subsidy.">
+  <meta name="keywords"
+    content="Fi Patel Electricals, Solar Himmatnagar, Solar Rooftop Gujarat, Adani Solar, WAAREE Solar, Citizen Solar, 0 down payment solar loan, solar installer Himmatnagar">
   <meta name="author" content="Fi Patel Electricals">
 
-  <!-- #12: Theme Color for Mobile Browser Chrome -->
+  <!-- Mobile & PWA Configuration -->
   <meta name="theme-color" content="#f58220">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fi Patel Solar">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="favicon.svg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Fi Patel Electricals | Authorized Solar Rooftop Dealer Himmatnagar">
-  <meta property="og:description" content="Go solar with 0 Down Payment & Easy Bank Loan EMI. Authorized dealer for Adani, WAAREE & Citizen Solar panels.">
+  <meta property="og:description"
+    content="Go solar with 0 Down Payment & Easy Bank Loan EMI. Authorized dealer for Adani, WAAREE & Citizen Solar panels.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fi-patel-electricals.vercel.app">
-  <meta property="og:image" content="https://fi-patel-electricals.vercel.app/assets/hero_slide_1.jpg">
+  <meta property="og:image" content="assets/hero_slide_1.jpg">
   <link rel="canonical" href="https://fi-patel-electricals.vercel.app">
 
   <!-- FontAwesome Icons & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <!-- Premium Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- JSON-LD Structured Data Schema (LocalBusiness & Solar Product) -->
+  <!-- JSON-LD Structured Data Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,7 +52,7 @@
         "@type": "LocalBusiness",
         "@id": "https://fi-patel-electricals.vercel.app/#business",
         "name": "Fi Patel Electricals",
-        "image": "https://fi-patel-electricals.vercel.app/assets/hero_slide_1.jpg",
+        "image": "assets/hero_slide_1.jpg",
         "url": "https://fi-patel-electricals.vercel.app",
         "telephone": "+919409264992",
         "priceRange": "₹₹",
@@ -83,20 +95,25 @@
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock"
         }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Fi Patel Electricals Solar Rooftop Installation Himmatnagar",
+        "description": "Watch real rooftop solar panel structure installation, wiring, and grid synchronization in Himmatnagar by Fi Patel Electricals.",
+        "thumbnailUrl": "assets/gallery_roof_sun.jpg",
+        "contentUrl": "Installisation.mp4",
+        "uploadDate": "2026-08-15"
       }
     ]
   }
   </script>
 </head>
+
 <body>
 
-  <!-- #11: Page Loading Spinner Overlay -->
-  <div class="page-loader" id="pageLoader">
-    <div class="loader-spinner"></div>
-  </div>
-
-  <!-- Floating WhatsApp Button (Desktop only - Hidden on Mobile to avoid bar clash) -->
-  <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop." target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop."
+    target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -105,15 +122,20 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
+  <!-- Global Scroll Progress Bar -->
+  <div class="global-scroll-progress-track">
+    <div class="global-scroll-progress-fill" id="globalScrollProgress"></div>
+  </div>
+
   <!-- Navbar Header -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#" class="brand-logo">
-        <img src="assets/logo.svg" alt="Fi Patel Electricals Official Logo" class="brand-logo-img">
+        <img src="assets/logo.svg" alt="Fi Patel Electricals Logo" class="brand-logo-img">
       </a>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#hero" class="nav-link active">Home</a></li>
         <li><a href="#calculator" class="nav-link">Calculator</a></li>
         <li><a href="#media-showcase" class="nav-link">Our Work</a></li>
         <li><a href="#testimonials" class="nav-link">Reviews</a></li>
@@ -121,9 +143,11 @@
         <li><a href="#inquiry" class="nav-cta">Get Free Quote</a></li>
       </ul>
 
-      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <div class="nav-right-actions">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -141,11 +165,11 @@
             <span class="hero-title-highlight">Start Generating Power</span>
           </h1>
 
-          <!-- #9: 3D Glassmorphic Navy Card (shortened for mobile) -->
-          <div class="poster-navy-box tilt-3d-card">
+          <div class="poster-navy-box">
             <div class="gold-badge-tag">HIMMATNAGAR'S #1 SOLAR DEALER</div>
             <h3>ADANI | WAAREE | CITIZEN SOLAR</h3>
-            <p>0 Down Payment & Easy Bank Loan EMI. 25 Year warranty Tier-1 panels.</p>
+            <p>0 Down Payment & Easy Bank Loan EMI. 25 Year Tier-1 Panel Warranty with ₹78,000 PM Surya Ghar Govt
+              Subsidy.</p>
           </div>
 
           <div class="poster-perks-row">
@@ -167,27 +191,38 @@
             <a href="#calculator" class="btn-primary">
               <i class="fa-solid fa-calculator"></i> Calculate Savings
             </a>
-            <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop." target="_blank" class="btn-whatsapp">
-              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop."
+              target="_blank" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Quote
             </a>
           </div>
         </div>
 
-        <!-- Hero Slider with Touch Swipe & Enhanced Visual Effects -->
+        <!-- Hero Slideshow with Touch Swipe & Touch Controls -->
         <div class="hero-image-wrapper">
           <div class="hero-slider-wrapper" id="heroSliderWrapper">
-            <!-- Progress Bar Indicator -->
-            <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
-
-            <!-- Slideshow -->
-            <div class="hero-slideshow" id="heroSlideshow">
-              <div class="slide active" style="background-image: url('assets/hero_slide_1.jpg');"></div>
-              <div class="slide" style="background-image: url('assets/hero_slide_2.png');"></div>
-              <div class="slide" style="background-image: url('assets/hero_slide_3.jpg');"></div>
-              <div class="slide" style="background-image: url('assets/hero_slide_4.png');"></div>
+            <div class="hero-progress-bar">
+              <div class="hero-progress-fill" id="heroProgressFill"></div>
             </div>
 
-            <!-- Slide Nav Arrows -->
+            <div class="hero-slideshow" id="heroSlideshow">
+              <div class="slide active" style="background-image: url('assets/gallery_engineer_install.png');"></div>
+              <div class="slide" style="background-image: url('assets/gallery_roof_sun.jpg');"></div>
+              <div class="slide" style="background-image: url('assets/gallery_solar_carport.jpg');"></div>
+              <div class="slide" style="background-image: url('assets/gallery_solar_farm.jpg');"></div>
+              <div class="slide" style="background-image: url('assets/hero_slide_2.png');"></div>
+              <div class="slide" style="background-image: url('assets/hero_slide_3.jpg');"></div>
+            </div>
+
+            <div class="slider-dots-bar" id="heroDotsBar">
+              <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+              <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
+              <button class="slider-dot" data-index="4" aria-label="Slide 5"></button>
+              <button class="slider-dot" data-index="5" aria-label="Slide 6"></button>
+            </div>
+
             <button class="hero-arrow-btn prev" id="heroSlidePrev" aria-label="Previous Slide">
               <i class="fa-solid fa-chevron-left"></i>
             </button>
@@ -196,7 +231,6 @@
             </button>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -207,56 +241,57 @@
       <div class="stats-grid">
         <div class="stat-box">
           <div class="stat-icon"><i class="fa-solid fa-solar-panel"></i></div>
-          <div class="stat-number" data-target="200" data-suffix="+">200+</div>
+          <div class="stat-number" data-target="200" data-suffix="+">0+</div>
           <div class="stat-label">Projects Installed</div>
         </div>
         <div class="stat-box">
           <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <div class="stat-number" data-target="88" data-suffix="%">88%</div>
+          <div class="stat-number" data-target="88" data-suffix="%">0%</div>
           <div class="stat-label">Avg Bill Savings</div>
         </div>
         <div class="stat-box">
           <div class="stat-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+          <div class="stat-number" data-target="100" data-suffix="%">0%</div>
           <div class="stat-label">Loan Approval</div>
         </div>
         <div class="stat-box">
           <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="stat-number" data-target="25" data-suffix="+ Yrs">25+ Yrs</div>
+          <div class="stat-number" data-target="25" data-suffix="+ Yrs">0+ Yrs</div>
           <div class="stat-label">Panel Warranty</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Authorized Brand Partners Banner -->
+  <!-- 3. Authorized Brand Partners -->
   <section class="partners-section" id="partners">
     <div class="container">
       <div class="partners-title">AUTHORIZED BRAND PARTNERS</div>
       <div class="partners-grid">
         <div class="partner-logo-card">
-          <img src="assets/adani_solar.svg" alt="Adani Solar Official Logo" class="partner-logo-img">
+          <img src="assets/adani_logo.png" alt="Adani Solar Logo" class="partner-logo-img">
           <span class="partner-badge"><i class="fa-solid fa-circle-check"></i> Authorized Dealer</span>
         </div>
         <div class="partner-logo-card">
-          <img src="assets/waaree_solar.svg" alt="WAAREE Solar Official Logo" class="partner-logo-img">
+          <img src="assets/waaree_logo.png" alt="WAAREE Solar Logo" class="partner-logo-img">
           <span class="partner-badge"><i class="fa-solid fa-circle-check"></i> Authorized Dealer</span>
         </div>
         <div class="partner-logo-card">
-          <img src="assets/citizen_solar.svg" alt="Citizen Solar Official Logo" class="partner-logo-img">
+          <img src="assets/citizen_logo.png" alt="Citizen Solar Logo" class="partner-logo-img">
           <span class="partner-badge"><i class="fa-solid fa-circle-check"></i> Authorized Dealer</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Solar Savings & Bank Loan EMI Calculator -->
+  <!-- 4. Smart Solar Savings & Bank Loan EMI Calculator -->
   <section class="section-padding sectors-bg" id="calculator">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">SMART SOLAR CALCULATOR</span>
         <h2 class="section-title">Solar Savings & EMI Estimator</h2>
-        <p class="section-subtitle">Select your preferred brand package or monthly electricity bill</p>
+        <p class="section-subtitle">Select your preferred solar brand package or adjust your monthly electricity bill
+        </p>
       </div>
 
       <!-- Before & After Comparison -->
@@ -317,7 +352,7 @@
             </div>
             <ul class="calc-subsidy-list">
               <li>0 Down Payment Easy Bank Loan EMI</li>
-              <li>Save up to 88%–92% on Electricity Bills</li>
+              <li>Save up to 88%–92% on Monthly Bills</li>
               <li>25 Years Performance Warranty on Tier-1 Panels</li>
             </ul>
           </div>
@@ -352,66 +387,74 @@
               <span>Estimated Payback (ROI):</span>
               <strong id="roiOutput" style="color: #60a5fa;">~1.8 Years</strong>
             </div>
-            <div class="calc-result-row emi-highlight-row">
+
+            <div class="roi-progress-wrapper">
+              <div class="sun-metric-label">Bill Reduction Efficiency:</div>
+              <div class="roi-progress-track">
+                <div class="roi-progress-fill" id="roiProgressBarFill"></div>
+              </div>
+            </div>
+
+            <div class="calc-result-row emi-highlight-row" style="margin-top: 10px;">
               <span>Bank EMI (0 Down Payment):</span>
               <strong id="emiOutput" style="color: #fbbf24;">₹1,800 - ₹3,500 / mo*</strong>
             </div>
-            <div class="emi-footnote">*Bank EMI tenure & interest as per bank decision / guidelines</div>
+            <div class="emi-footnote">*Bank EMI tenure & interest as per bank guidelines</div>
           </div>
         </div>
       </div>
+
+
     </div>
   </section>
 
-  <!-- #6: Inquiry Form (moved right after calculator) -->
+  <!-- 5. Request Free Solar Quote -->
   <section class="section-padding" id="inquiry">
     <div class="container">
       <div class="inquiry-box">
-        <h3 style="font-size: 1.6rem; font-weight: 900; text-align: center; margin-bottom: 20px;">
+        <h3
+          style="font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 20px; color: var(--secondary);">
           Request Free Solar Quote
         </h3>
 
-        <div id="formAlertBox" style="display: none; padding: 12px; border-radius: 10px; margin-bottom: 16px; text-align: center; font-weight: 700; background: #d1fae5; color: #065f46;"></div>
+        <div id="formAlertBox"
+          style="display: none; padding: 14px; border-radius: 12px; margin-bottom: 18px; text-align: center; font-weight: 700;">
+        </div>
 
-        <form id="inquiryForm" style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="form-group">
+        <form id="inquiryForm" style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="form-group" style="margin-bottom: 0;">
             <input type="text" id="formNameInput" class="form-input" placeholder="Your Full Name" required>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="margin-bottom: 0;">
             <input type="tel" id="formPhoneInput" class="form-input" placeholder="Mobile Number" required>
           </div>
-          <div class="form-group">
-            <input type="text" id="formCityInput" class="form-input" placeholder="City / Area Name (e.g. Himmatnagar)" required>
+          <div class="form-group" style="margin-bottom: 0;">
+            <input type="text" id="formCityInput" class="form-input" placeholder="City / Area (e.g. Himmatnagar)"
+              required>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="margin-bottom: 0;">
             <input type="email" id="formEmailInput" class="form-input" placeholder="Email Address (optional)">
           </div>
-          <div class="form-group">
+          <div class="form-group" style="margin-bottom: 0;">
             <select id="formSectorSelect" class="form-select" required>
               <option value="" disabled selected>Select Installation Type</option>
-              <option value="Residential">Rooftop Residential</option>
-              <option value="Parking">Solar Parking</option>
-              <option value="Complex">Commercial Complex</option>
-              <option value="SolarPark">Solar Park</option>
-              <option value="Religious">Religious Place</option>
-              <option value="Hotel">Hotel / Business</option>
-              <option value="School">School / College</option>
-              <option value="Industrial">Industrial Park</option>
-              <option value="Office">Private Office</option>
-              <option value="Dairy">Dairy Industry</option>
+              <option value="Residential Rooftop">Rooftop Residential</option>
+              <option value="Solar Carport">Solar Parking Carport</option>
+              <option value="Commercial Complex">Commercial Complex</option>
+              <option value="Agricultural Pump">Agriculture Pump</option>
+              <option value="Industrial Plant">Industrial Power Plant</option>
             </select>
           </div>
           <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-            <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+            <i class="fa-solid fa-paper-plane"></i> Submit & Get WhatsApp Quote
           </button>
         </form>
       </div>
     </div>
   </section>
 
-
-  <!-- How It Works 3-Step Section -->
-  <section class="section-padding" id="how-it-works">
+  <!-- 6. Simple 3-Step Process -->
+  <section class="section-padding sectors-bg" id="how-it-works">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">SIMPLE 3-STEP PROCESS</span>
@@ -419,43 +462,133 @@
         <p class="section-subtitle">From free site inspection to 0 electricity bill in 3 easy steps</p>
       </div>
       <div class="steps-grid">
-        <div class="step-card reveal-3d-scroll">
+        <div class="step-card">
           <div class="step-badge">STEP 01</div>
           <div class="step-icon"><i class="fa-solid fa-clipboard-list"></i></div>
           <h3>Free Site Inspection</h3>
-          <p>Our engineers measure your roof area, shade angles, and monthly power consumption for exact kW capacity.</p>
+          <p>Our engineers measure your roof area, shade angles, and monthly power consumption for exact kW capacity.
+          </p>
         </div>
-        <div class="step-card reveal-3d-scroll">
+        <div class="step-card">
           <div class="step-badge">STEP 02</div>
           <div class="step-icon"><i class="fa-solid fa-building-columns"></i></div>
           <h3>0 Down Payment Loan & Subsidy</h3>
           <p>We process bank loan EMI approval and submit your PM Surya Ghar ₹78,000 Govt subsidy paperwork.</p>
         </div>
-        <div class="step-card reveal-3d-scroll">
+        <div class="step-card">
           <div class="step-badge">STEP 03</div>
           <div class="step-icon"><i class="fa-solid fa-solar-panel"></i></div>
           <h3>Setup & Net-Metering</h3>
-          <p>Certified structure mounting within 48 hours, DISCOM net-meter grid sync, and start generating free power!</p>
+          <p>Certified structure mounting within 48 hours, DISCOM net-meter grid sync, and start generating free power!
+          </p>
+        </div>
+  </section>
+
+  <!-- Solar Installation Locations Section -->
+  <section class="section-padding" id="sectors" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SOLAR APPLICATIONS & SECTORS</span>
+        <h2 class="section-title">Where Can Solar Energy Be Installed?</h2>
+        <p class="section-subtitle">We engineer customized solar rooftop & ground-mounted solutions across all sectors
+        </p>
+      </div>
+
+      <div class="sectors-banner-box">
+        <div class="sectors-grid-pills">
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-house"></i></div>
+            <div class="sector-info">
+              <h4>Residential Rooftops</h4>
+              <p>Home Roofs & Villas</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-square-parking"></i></div>
+            <div class="sector-info">
+              <h4>Solar Parking Sheds</h4>
+              <p>Carports & Vehicle Roofs</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-city"></i></div>
+            <div class="sector-info">
+              <h4>Commercial Complexes</h4>
+              <p>Shopping Malls & Markets</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-solar-panel"></i></div>
+            <div class="sector-info">
+              <h4>Solar Parks & Farms</h4>
+              <p>Ground Mounted Projects</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-kaaba"></i></div>
+            <div class="sector-info">
+              <h4>Religious & Trust Sites</h4>
+              <p>Temples, Mosques & Halls</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-hotel"></i></div>
+            <div class="sector-info">
+              <h4>Hotels & Hospitality</h4>
+              <p>Hotels, Resorts & Dining</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="sector-info">
+              <h4>Schools & Colleges</h4>
+              <p>Educational Campuses</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-industry"></i></div>
+            <div class="sector-info">
+              <h4>Industrial Parks</h4>
+              <p>Factories & Plants</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="sector-info">
+              <h4>Private Offices</h4>
+              <p>Corporate Workspaces</p>
+            </div>
+          </div>
+          <div class="sector-pill-card">
+            <div class="sector-icon"><i class="fa-solid fa-cow"></i></div>
+            <div class="sector-info">
+              <h4>Dairy & Agriculture</h4>
+              <p>Dairy Plants & Cold Storage</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Media Showcase (Unique One-by-One Animated Photo Showcase) -->
-  <section class="section-padding sectors-bg" id="media-showcase">
+  <!-- 7. Media Showcase (All 11 Photos Gallery & HD Custom Video) -->
+  <section class="section-padding" id="media-showcase">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">OUR FEATURED PROJECTS</span>
         <h2 class="section-title">Completed Solar Installations</h2>
-        <p class="section-subtitle">Real site photography demonstrating our premium quality engineering</p>
+        <p class="section-subtitle">Real site photography & video demonstrating our engineering quality across
+          Sabarkantha</p>
       </div>
 
-      <!-- One-by-One Animated Photo Showcase Stage -->
-      <div class="work-showcase-container" id="workShowcase">
-        <!-- Progress Bar Indicator -->
-        <div class="showcase-progress-bar"><div class="showcase-progress-fill" id="showcaseProgress"></div></div>
 
-        <!-- Navigation Arrow Buttons -->
+
+      <!-- 1. One-by-One Animated Carousel Stage -->
+      <div class="work-showcase-container" id="workShowcase">
+        <div class="showcase-progress-bar">
+          <div class="showcase-progress-fill" id="showcaseProgress"></div>
+        </div>
+
         <button class="showcase-arrow-btn prev" id="workPrevBtn" aria-label="Previous Project">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -463,147 +596,88 @@
           <i class="fa-solid fa-chevron-right"></i>
         </button>
 
-        <!-- Slide Counter Badge -->
-        <div class="showcase-counter-badge" id="workCounter">01 / 05</div>
-
-        <!-- Mobile Swipe Hint Badge -->
-        <div class="mobile-swipe-hint" id="mobileSwipeHint">
-          <i class="fa-solid fa-hand-pointer"></i> Swipe to explore
-        </div>
-
-        <!-- Main Active Slide Display Stage -->
         <div class="work-stage" id="workStage">
-          <!-- Slide 1 -->
-          <div class="work-slide active" data-index="0">
-            <img src="assets/gallery_roof_sun.jpg" alt="Residential Rooftop Solar Project" loading="lazy">
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="work-slide" data-index="1">
-            <img src="assets/gallery_engineer_install.png" alt="Certified Solar Mounting Installation" loading="lazy">
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="work-slide" data-index="2">
-            <img src="assets/gallery_solar_farm.jpg" alt="Solar Agriculture Farm" loading="lazy">
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="work-slide" data-index="3">
-            <img src="assets/gallery_solar_carport.jpg" alt="Commercial Solar Carport" loading="lazy">
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="work-slide" data-index="4">
-            <img src="assets/solar_rooftop_res.jpg" alt="High Capacity Rooftop Solar Array" loading="lazy">
-          </div>
+          <!-- Dynamic Slides Populated via JS -->
         </div>
       </div>
 
-      <!-- Video Loop -->
-      <div class="video-frame-card" style="margin-top: 40px;">
-        <video autoplay loop muted playsinline poster="assets/gallery_roof_sun.jpg">
-          <source src="Installisation.mp4" type="video/mp4">
-          Your browser does not support HTML5 video playback.
-        </video>
+      <!-- 2. Masonry Photo Grid View (Hidden by default, toggled via View Switcher) -->
+      <div class="photo-grid-wrapper" id="photoGridWrapper" style="display: none;">
+        <div class="project-photo-grid" id="projectPhotoGrid">
+          <!-- Dynamic Grid Items Populated via JS -->
+        </div>
       </div>
 
-      <div style="text-align: center; margin-top: 25px;">
-        <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20please%20send%20more%20project%20photos%20and%20videos." target="_blank" class="btn-whatsapp">
-          <i class="fa-brands fa-whatsapp"></i> View More Project Photos & Videos on WhatsApp
-        </a>
+      <!-- Video Showcase Block -->
+      <div class="video-frame-card" id="videoContainer"
+        style="margin-top: 40px; border-radius: var(--radius-lg); overflow: hidden;">
+        <div class="video-wrapper">
+          <video id="projectVideo" autoplay loop muted playsinline
+            poster="PRoject completed/ChatGPT Image Aug 15, 2026, 11_02_14 AM.png">
+            <source src="Installisation.mp4" type="video/mp4">
+            Your browser does not support HTML5 video playback.
+          </video>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Customer Testimonials (#8: Horizontal Swipe on Mobile) -->
-  <section class="section-padding" id="testimonials">
+  <!-- 8. Customer Reviews -->
+  <section class="section-padding sectors-bg" id="testimonials">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">CUSTOMER REVIEWS</span>
         <h2 class="section-title">What Our Customers Say</h2>
-        <p class="section-subtitle">Real experiences from solar customers across Sabarkantha</p>
+        <p class="section-subtitle">Real experiences from solar rooftop owners across Sabarkantha</p>
       </div>
 
-      <!-- Google Rating Header Badge -->
-      <div class="google-rating-banner">
-        <div class="google-rating-content">
-          <i class="fa-brands fa-google google-icon"></i>
-          <div>
-            <strong>4.9 ★★★★★ Rating on Google</strong>
-            <span>Based on 85+ verified solar installation reviews</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Horizontal Scroll-Snap Testimonials -->
+
       <div class="testimonials-scroll-track">
         <div class="testimonial-card">
           <div class="stars-row">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonial-text">"Installed 3 kW system at my home. Bill dropped from ₹3,800 to almost zero! Zero down payment EMI was super easy."</p>
+          <p class="testimonial-text">"Installed 3.24 kW system at my home in Himmatnagar. Bill dropped from ₹3,800 to
+            almost zero! Zero down payment bank EMI process was super smooth."</p>
           <div class="testimonial-user">
             <div class="user-avatar">MP</div>
             <div>
-              <strong>Mahesh Patel</strong>
-              <span>Residential, Himmatnagar</span>
+              <strong style="color: var(--secondary); font-size: 1rem; display: block;">Mukesh Bhai Parmar</strong>
+              <div style="color: var(--text-muted); font-size: 0.8rem;">Residential Rooftop, Himmatnagar</div>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
           <div class="stars-row">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonial-text">"Installed 15 kW on our complex. Extremely fast 48-hour setup and excellent bank loan documentation support."</p>
+          <p class="testimonial-text">"Installed 15 kW on our commercial building in Kanai. Extremely fast structure
+            setup and excellent bank loan documentation support by Fi Patel team."</p>
           <div class="testimonial-user">
             <div class="user-avatar">RS</div>
             <div>
-              <strong>Rajesh Shah</strong>
-              <span>Commercial, Sabarkantha</span>
+              <strong style="color: var(--secondary); font-size: 1rem; display: block;">Ramesh Bhai Suthar</strong>
+              <div style="color: var(--text-muted); font-size: 0.8rem;">Commercial Solar, Kanai</div>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
           <div class="stars-row">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonial-text">"Adani panels installed for our chilling plant. Continuous power with massive savings. Highly recommended!"</p>
+          <p class="testimonial-text">"Citizen Solar 3.3 kW installed at Rajpura. Got full ₹78,000 PM Surya Ghar Govt
+            subsidy directly credited! Honest guidance & best service by Fatehali Bhai."</p>
           <div class="testimonial-user">
-            <div class="user-avatar">ID</div>
+            <div class="user-avatar">ZR</div>
             <div>
-              <strong>Idar Dairy Co.</strong>
-              <span>Industrial, Idar</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars-row">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonial-text">"Citizen Solar 3.3 kW installed. Got full ₹78,000 PM Surya Ghar subsidy directly credited! Very honest guidance by Fatehali Bhai."</p>
-          <div class="testimonial-user">
-            <div class="user-avatar">KP</div>
-            <div>
-              <strong>Kiritbhai Patel</strong>
-              <span>Residential, Modasa</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars-row">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonial-text">"Ground mounted 10 kW solar pump system for farm tube well. No diesel generator needed now. Saves ₹15,000 every month!"</p>
-          <div class="testimonial-user">
-            <div class="user-avatar">SC</div>
-            <div>
-              <strong>Sureshbhai Chaudhari</strong>
-              <span>Agricultural Farm, Idar</span>
+              <strong style="color: var(--secondary); font-size: 1rem; display: block;">Zakir Ali Rajpura</strong>
+              <div style="color: var(--text-muted); font-size: 0.8rem;">Residential Solar, Banaskantha</div>
             </div>
           </div>
         </div>
@@ -611,14 +685,21 @@
     </div>
   </section>
 
-  <!-- FAQ Accordion Section -->
-  <section class="section-padding sectors-bg" id="faq">
+  <!-- 9. Frequently Asked Questions with Search -->
+  <section class="section-padding" id="faq">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
         <h2 class="section-title">Got Questions About Solar?</h2>
-        <p class="section-subtitle">Clear answers to help you choose the right solar rooftop system</p>
+        <p class="section-subtitle">Search or select questions to learn more about solar rooftop installations</p>
       </div>
+
+      <div class="faq-search-wrapper">
+        <i class="fa-solid fa-magnifying-glass faq-search-icon"></i>
+        <input type="text" id="faqSearchInput" class="faq-search-input"
+          placeholder="Search FAQ (e.g. subsidy, loan, warranty, rainy day)...">
+      </div>
+
       <div class="faq-container">
         <div class="faq-item active">
           <button type="button" class="faq-question">
@@ -626,7 +707,8 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <p>Under PM Surya Ghar scheme, Central Govt provides ₹30,000 for 1 kW, ₹60,000 for 2 kW, and up to ₹78,000 maximum cap for 3 kW and above solar rooftop systems directly credited to your bank account.</p>
+            <p>Under PM Surya Ghar scheme, Central Govt provides ₹30,000 for 1 kW, ₹60,000 for 2 kW, and up to ₹78,000
+              maximum cap for 3 kW and above solar rooftop systems directly credited to your bank account.</p>
           </div>
         </div>
 
@@ -636,7 +718,8 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <p>Nationalized & private banks offer 100% solar loan coverage with 0 down payment. The monthly EMI is usually lower than or equal to your monthly electricity bill savings!</p>
+            <p>Nationalized & private banks offer 100% solar loan coverage with 0 down payment. The monthly EMI is
+              usually lower than or equal to your monthly electricity bill savings!</p>
           </div>
         </div>
 
@@ -646,7 +729,8 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <p>Our certified technicians complete structure mounting & panel installation within 48 hours. DISCOM net-meter inspection and grid synchronization is completed shortly after.</p>
+            <p>Our certified technicians complete structure mounting & panel installation within 48 hours. DISCOM
+              net-meter inspection and grid synchronization is completed shortly after.</p>
           </div>
         </div>
 
@@ -656,7 +740,8 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <p>Tier-1 Mono PERC solar panels from Adani, WAAREE, and Citizen Solar come with a 25-Year Performance Warranty and 10-Year product warranty.</p>
+            <p>Tier-1 Mono PERC solar panels from Adani, WAAREE, and Citizen Solar come with a 25-Year Performance
+              Warranty and 10-Year product warranty.</p>
           </div>
         </div>
 
@@ -666,99 +751,76 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <p>Yes! Modern Mono PERC panels generate power using ambient daylight even on overcast days. Net-metering grid connection ensures uninterrupted power supply 24x7.</p>
+            <p>Yes! Modern Mono PERC panels generate power using ambient daylight even on overcast days. Net-metering
+              grid connection ensures uninterrupted power supply 24x7.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. Contacts Section -->
+  <!-- 10. Direct Team Contacts & Map -->
   <section class="section-padding sectors-bg" id="contacts">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">DIRECT CONTACT</span>
         <h2 class="section-title">Contact Our Team</h2>
-        <p class="section-subtitle">Call our advisors for free site inspection</p>
+        <p class="section-subtitle">Call our experts directly for free site inspection</p>
       </div>
 
       <div class="team-contacts-grid">
         <div class="team-contact-card">
           <div class="team-contact-icon"><i class="fa-solid fa-user-tie"></i></div>
-          <div class="team-contact-info">
-            <span class="team-role-tag">Solar Tech Director</span>
-            <h4 class="team-contact-name">Fatehali Patel</h4>
-          </div>
+          <span class="team-role-tag">Solar Tech Director</span>
+          <h4 class="team-contact-name">Fatehali Patel</h4>
           <div class="team-action-buttons">
-            <a href="tel:9409264992" class="team-phone-btn">
-              <i class="fa-solid fa-phone"></i> Call
-            </a>
-            <a href="https://wa.me/919409264992?text=Hello%20Fatehali%20Bhai,%20I%20want%20information%20about%20Solar%20Rooftop." target="_blank" class="team-wa-btn">
-              <i class="fa-brands fa-whatsapp"></i> Chat
-            </a>
+            <a href="tel:9409264992" class="team-phone-btn"><i class="fa-solid fa-phone"></i> Call</a>
+            <a href="https://wa.me/919409264992?text=Hello%20Fatehali%20Bhai,%20I%20want%20information%20about%20Solar."
+              target="_blank" class="team-wa-btn"><i class="fa-brands fa-whatsapp"></i> Chat</a>
           </div>
         </div>
 
         <div class="team-contact-card">
           <div class="team-contact-icon"><i class="fa-solid fa-user-gear"></i></div>
-          <div class="team-contact-info">
-            <span class="team-role-tag">System Engineer</span>
-            <h4 class="team-contact-name">Mahedi Hasan</h4>
-          </div>
+          <span class="team-role-tag">System Engineer</span>
+          <h4 class="team-contact-name">Mahedi Hasan</h4>
           <div class="team-action-buttons">
-            <a href="tel:8128629039" class="team-phone-btn">
-              <i class="fa-solid fa-phone"></i> Call
-            </a>
-            <a href="https://wa.me/918128629039?text=Hello%20Mahedi%20Bhai,%20I%20want%20information%20about%20Solar%20Installation." target="_blank" class="team-wa-btn">
-              <i class="fa-brands fa-whatsapp"></i> Chat
-            </a>
+            <a href="tel:8128629039" class="team-phone-btn"><i class="fa-solid fa-phone"></i> Call</a>
+            <a href="https://wa.me/918128629039?text=Hello%20Mahedi%20Bhai,%20I%20want%20information%20about%20Solar."
+              target="_blank" class="team-wa-btn"><i class="fa-brands fa-whatsapp"></i> Chat</a>
           </div>
         </div>
 
         <div class="team-contact-card">
           <div class="team-contact-icon"><i class="fa-solid fa-headset"></i></div>
-          <div class="team-contact-info">
-            <span class="team-role-tag">Customer Support</span>
-            <h4 class="team-contact-name">Mohammad Hussian</h4>
-          </div>
+          <span class="team-role-tag">Customer Support</span>
+          <h4 class="team-contact-name">Mohammad Hussian</h4>
           <div class="team-action-buttons">
-            <a href="tel:8866590501" class="team-phone-btn">
-              <i class="fa-solid fa-phone"></i> Call
-            </a>
-            <a href="https://wa.me/918866590501?text=Hello%20Mohammad%20Bhai,%20I%20have%20a%20support%20query%20about%20Solar%20Rooftop." target="_blank" class="team-wa-btn">
-              <i class="fa-brands fa-whatsapp"></i> Chat
-            </a>
+            <a href="tel:8866590501" class="team-phone-btn"><i class="fa-solid fa-phone"></i> Call</a>
+            <a href="https://wa.me/918866590501?text=Hello%20Mohammad%20Bhai,%20I%20have%20a%20query%20about%20Solar."
+              target="_blank" class="team-wa-btn"><i class="fa-brands fa-whatsapp"></i> Chat</a>
           </div>
         </div>
       </div>
 
-      <!-- Address & Info Card -->
-      <div class="location-card" style="margin-bottom: 30px;">
+      <div class="location-card">
         <div class="loc-details">
           <div class="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div>
-            <h4 style="font-size: 1.1rem; font-weight: 800;">Office Address:</h4>
-            <p style="color: #475569; font-size: 0.95rem; margin-top: 4px;">
-              Waywait Complex, RTO Chokdi, Himmatnagar, Sabarkantha, Gujarat - 383001
-            </p>
+            <h4 style="color: white; font-size: 1.1rem;">Office Address:</h4>
+            <p style="color: var(--text-sub); font-size: 0.92rem;">Waywait Complex, RTO Chokdi, Himmatnagar,
+              Sabarkantha, Gujarat - 383001</p>
             <div style="display: flex; gap: 16px; margin-top: 8px; font-size: 0.85rem; flex-wrap: wrap;">
-              <span style="color: #1d1e38; font-weight: 700;"><i class="fa-solid fa-clock" style="color: #f58220;"></i> Mon–Sat: 9 AM – 7 PM</span>
-              <span style="color: #1d1e38; font-weight: 700;"><i class="fa-solid fa-envelope" style="color: #f58220;"></i> fipatelelectricals@gmail.com</span>
+              <span style="color: var(--primary-glow);"><i class="fa-solid fa-clock"></i> Mon–Sat: 9 AM – 7 PM</span>
+              <span style="color: var(--text-sub);"><i class="fa-solid fa-envelope"></i>
+                fipatelelectricals@gmail.com</span>
             </div>
           </div>
         </div>
-        <a href="https://maps.google.com/?q=RTO+Chokdi+Himmatnagar+Sabarkantha+Gujarat" target="_blank" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">
-          <i class="fa-solid fa-map-location-dot"></i> Open in Maps
+        <a href="https://maps.google.com/?q=RTO+Chokdi+Himmatnagar+Sabarkantha+Gujarat" target="_blank"
+          class="btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">
+          <i class="fa-solid fa-map-location-dot"></i> Open Maps
         </a>
-      </div>
-
-      <!-- #10: Google Maps Embed (hidden on mobile via CSS) -->
-      <div class="map-embed-wrapper">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.824987654!2d72.9634!3d23.5985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395db0f400000001%3A0x0!2zMjPCsDM1JzefTiA3MsKwNTcnNDguMiJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-          width="100%" height="300" style="border:0; border-radius: 20px;" 
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
     </div>
   </section>
@@ -769,9 +831,42 @@
       <a href="tel:9409264992" class="mobile-bar-btn mobile-btn-call">
         <i class="fa-solid fa-phone"></i> Call Now
       </a>
-      <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop." target="_blank" class="mobile-bar-btn mobile-btn-wa">
+      <a href="https://wa.me/919409264992?text=Hello%20Fi%20Patel%20Electricals,%20I%20want%20information%20about%20Solar%20Rooftop."
+        target="_blank" class="mobile-bar-btn mobile-btn-wa">
         <i class="fa-brands fa-whatsapp"></i> WhatsApp
       </a>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="lightbox-media-wrapper">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      </div>
+      <div class="lightbox-info-bar">
+        <div>
+          <span class="lightbox-cat-badge" id="lightboxCat">Residential</span>
+          <h3 class="lightbox-title" id="lightboxTitle">Project Photo Title</h3>
+          <p class="lightbox-location" id="lightboxLoc"
+            style="color: var(--primary); font-weight: 700; font-size: 0.88rem; margin-top: 4px;"><i
+              class="fa-solid fa-location-dot"></i> Kanai, Himmatnagar</p>
+        </div>
+        <a href="#" id="lightboxWaBtn" target="_blank" class="btn-whatsapp"
+          style="padding: 8px 16px; font-size: 0.85rem;">
+          <i class="fa-brands fa-whatsapp"></i> Inquire Project
+        </a>
+      </div>
+      <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" aria-label="Previous Image">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-nav-btn next" id="lightboxNextBtn" aria-label="Next Image">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
   </div>
 
@@ -781,15 +876,18 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="brand-logo" style="margin-bottom: 14px;">
-            <img src="assets/logo_dark_bg.svg" alt="Fi Patel Electricals Official Logo" class="footer-logo-img">
+            <img src="assets/logo_dark_bg.svg" alt="Fi Patel Logo" class="footer-logo-img">
           </div>
-          <p style="font-size: 0.85rem; color: #94a3b8; max-width: 380px;">
-            #1 Solar rooftop provider in Himmatnagar. 200+ projects. Adani, WAAREE & Citizen Solar. 0 down payment.
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            #1 Solar rooftop provider in Himmatnagar. 200+ projects installed. Adani, WAAREE & Citizen Solar panels with
+            0 down payment.
           </p>
           <div class="footer-socials">
-            <a href="https://wa.me/919409264992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/919409264992" target="_blank" aria-label="WhatsApp"><i
+                class="fa-brands fa-whatsapp"></i></a>
             <a href="tel:9409264992" aria-label="Phone Call"><i class="fa-solid fa-phone"></i></a>
-            <a href="https://maps.google.com/?q=RTO+Chokdi+Himmatnagar+Sabarkantha+Gujarat" target="_blank" aria-label="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+            <a href="https://maps.google.com/?q=RTO+Chokdi+Himmatnagar+Sabarkantha+Gujarat" target="_blank"
+              aria-label="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
           </div>
         </div>
 
@@ -824,4 +922,5 @@
   <script src="js/calculator.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>

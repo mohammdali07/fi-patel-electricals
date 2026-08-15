@@ -1,0 +1,18 @@
+{
+  "name": "Fi Patel Electricals - Solar Rooftop Dealer",
+  "short_name": "Fi Patel Solar",
+  "description": "Authorized Solar Rooftop Dealer in Himmatnagar. Adani, WAAREE & Citizen Solar Panels with 0 Down Payment Loan EMI.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#f58220",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

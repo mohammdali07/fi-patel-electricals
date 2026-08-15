@@ -14,6 +14,7 @@ function initSolarCalculator() {
   const roiOutput = document.getElementById('roiOutput');
   const emiOutput = document.getElementById('emiOutput');
   const brandPills = document.querySelectorAll('.brand-select-pill');
+  const roiProgressBar = document.getElementById('roiProgressBarFill');
 
   let currentBrand = 'adani'; // 'adani' | 'citizen' | 'custom'
 
@@ -27,6 +28,10 @@ function initSolarCalculator() {
       }
     });
 
+    if (typeof sfx !== 'undefined' && sfx.click) {
+      sfx.click();
+    }
+
     if (brand === 'adani') {
       if (billInput) billInput.value = 3500;
       applyPresetValues({
@@ -36,6 +41,7 @@ function initSolarCalculator() {
         netCost: 77000,
         savings: '₹3,500 / mo',
         roi: '~1.8 Years',
+        roiPct: 88,
         emi: '₹1,800 - ₹3,500 / mo*'
       });
     } else if (brand === 'citizen') {
@@ -47,6 +53,7 @@ function initSolarCalculator() {
         netCost: 65000,
         savings: '₹3,500 / mo',
         roi: '~1.5 Years',
+        roiPct: 92,
         emi: '₹1,500 - ₹3,000 / mo*'
       });
     } else {
@@ -58,7 +65,7 @@ function initSolarCalculator() {
     elements.forEach(el => {
       if (el) {
         el.classList.remove('pulse-value');
-        void el.offsetWidth; // Trigger reflow to restart CSS animation
+        void el.offsetWidth;
         el.classList.add('pulse-value');
       }
     });
@@ -73,6 +80,14 @@ function initSolarCalculator() {
     if (savingsOutput) savingsOutput.textContent = data.savings;
     if (roiOutput) roiOutput.textContent = data.roi;
     if (emiOutput) emiOutput.textContent = data.emi;
+    if (roiProgressBar) roiProgressBar.style.width = (data.roiPct || 88) + '%';
+
+    // Auto-update Himmatnagar Sun Capacity Input if exists
+    const sunCapInput = document.getElementById('sunCapacityInput');
+    if (sunCapInput) {
+      sunCapInput.value = parseFloat(data.kw) || 3.24;
+      sunCapInput.dispatchEvent(new Event('input'));
+    }
 
     triggerPulse([kwOutput, totalCostOutput, subsidyOutput, netCostOutput, savingsOutput, roiOutput, emiOutput]);
   }
@@ -80,10 +95,8 @@ function initSolarCalculator() {
   function calculateSolar() {
     const monthlyBill = parseFloat(billInput.value) || 3500;
 
-    // Display formatted bill amount
     if (billDisplay) billDisplay.textContent = '₹' + monthlyBill.toLocaleString('en-IN');
 
-    // If standard 3500 bill and brand is selected, keep brand package accurate
     if (monthlyBill === 3500 && currentBrand === 'adani') {
       applyPresetValues({
         kw: '3.24 kW',
@@ -92,6 +105,7 @@ function initSolarCalculator() {
         netCost: 77000,
         savings: '₹3,500 / mo',
         roi: '~1.8 Years',
+        roiPct: 88,
         emi: '₹1,800 - ₹3,500 / mo*'
       });
       return;
@@ -103,37 +117,30 @@ function initSolarCalculator() {
         netCost: 65000,
         savings: '₹3,500 / mo',
         roi: '~1.5 Years',
+        roiPct: 92,
         emi: '₹1,500 - ₹3,000 / mo*'
       });
       return;
     }
 
-    // Recommended System kW (1 kW generates ~120 units, saving ~₹1,200/mo)
+    // Capacity calculation
     let recommendedKw = Math.ceil(monthlyBill / 1200);
     if (recommendedKw < 1) recommendedKw = 1;
     if (recommendedKw > 25) recommendedKw = 25;
 
-    // Base System Cost per kW
     const baseCostPerKw = currentBrand === 'citizen' ? 44000 : 48000;
     const totalCost = recommendedKw * baseCostPerKw;
 
-    // PM Surya Ghar Muft Bijli Yojana Central Govt Subsidy:
-    // 1 kW = ₹30,000 | 2 kW = ₹60,000 | 3 kW+ = ₹78,000 max cap
     let subsidy = 0;
     if (recommendedKw === 1) subsidy = 30000;
     else if (recommendedKw === 2) subsidy = 60000;
     else subsidy = 78000;
 
     const netCost = totalCost - subsidy;
-
-    // Monthly Savings (~88% to 92% of power bill)
     const monthlySavings = Math.round(monthlyBill * 0.90);
-
-    // Payback Period (ROI in years)
     const annualSavings = monthlySavings * 12;
     const paybackYears = annualSavings > 0 ? (netCost / annualSavings).toFixed(1) : '2.0';
 
-    // Bank Loan EMI on Net Cost (approx 7% p.a. over 60 months)
     const monthlyInterestRate = 0.07 / 12;
     const tenureMonths = 60;
     let emi = 0;
@@ -141,7 +148,6 @@ function initSolarCalculator() {
       emi = Math.round((netCost * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenureMonths)) / (Math.pow(1 + monthlyInterestRate, tenureMonths) - 1));
     }
 
-    // Update UI elements
     if (kwOutput) kwOutput.textContent = recommendedKw + ' kW';
     if (totalCostOutput) totalCostOutput.textContent = '₹' + totalCost.toLocaleString('en-IN');
     if (subsidyOutput) subsidyOutput.textContent = '- ₹' + subsidy.toLocaleString('en-IN') + '*';
@@ -150,10 +156,18 @@ function initSolarCalculator() {
     if (roiOutput) roiOutput.textContent = '~' + paybackYears + ' Years';
     if (emiOutput) emiOutput.textContent = '₹' + emi.toLocaleString('en-IN') + ' / mo*';
 
+    const calcRoiPct = Math.min(Math.max(100 - (paybackYears * 15), 45), 95);
+    if (roiProgressBar) roiProgressBar.style.width = calcRoiPct + '%';
+
+    const sunCapInput = document.getElementById('sunCapacityInput');
+    if (sunCapInput) {
+      sunCapInput.value = recommendedKw;
+      sunCapInput.dispatchEvent(new Event('input'));
+    }
+
     triggerPulse([kwOutput, totalCostOutput, subsidyOutput, netCostOutput, savingsOutput, roiOutput, emiOutput]);
   }
 
-  // Attach brand pill events
   brandPills.forEach(pill => {
     pill.addEventListener('click', () => {
       const brand = pill.getAttribute('data-brand');
@@ -164,12 +178,13 @@ function initSolarCalculator() {
   if (billInput) {
     billInput.addEventListener('input', () => {
       calculateSolar();
+      if (typeof sfx !== 'undefined' && sfx.slide) {
+        sfx.slide();
+      }
     });
   }
 
-  // Initial load
   updateBrandSelection('adani');
 }
 
 document.addEventListener('DOMContentLoaded', initSolarCalculator);
-
