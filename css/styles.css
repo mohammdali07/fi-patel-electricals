@@ -343,15 +343,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gold-badge-tag {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 14px auto;
   background: var(--primary-gradient);
   color: white;
   font-weight: 900;
-  font-size: 0.72rem;
-  padding: 3px 10px;
+  font-size: 1.05rem;
+  padding: 6px 16px;
   border-radius: 6px;
   letter-spacing: 0.8px;
-  margin-bottom: 10px;
+  text-align: center;
 }
 
 .poster-navy-box h3 {
