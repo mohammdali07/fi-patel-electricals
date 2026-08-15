@@ -54,6 +54,16 @@ function initSolarCalculator() {
     }
   }
 
+  function triggerPulse(elements) {
+    elements.forEach(el => {
+      if (el) {
+        el.classList.remove('pulse-value');
+        void el.offsetWidth; // Trigger reflow to restart CSS animation
+        el.classList.add('pulse-value');
+      }
+    });
+  }
+
   function applyPresetValues(data) {
     if (billDisplay && billInput) billDisplay.textContent = '₹' + (parseFloat(billInput.value) || 3500).toLocaleString('en-IN');
     if (kwOutput) kwOutput.textContent = data.kw;
@@ -63,6 +73,8 @@ function initSolarCalculator() {
     if (savingsOutput) savingsOutput.textContent = data.savings;
     if (roiOutput) roiOutput.textContent = data.roi;
     if (emiOutput) emiOutput.textContent = data.emi;
+
+    triggerPulse([kwOutput, totalCostOutput, subsidyOutput, netCostOutput, savingsOutput, roiOutput, emiOutput]);
   }
 
   function calculateSolar() {
@@ -137,6 +149,8 @@ function initSolarCalculator() {
     if (savingsOutput) savingsOutput.textContent = '₹' + monthlySavings.toLocaleString('en-IN') + ' / mo';
     if (roiOutput) roiOutput.textContent = '~' + paybackYears + ' Years';
     if (emiOutput) emiOutput.textContent = '₹' + emi.toLocaleString('en-IN') + ' / mo*';
+
+    triggerPulse([kwOutput, totalCostOutput, subsidyOutput, netCostOutput, savingsOutput, roiOutput, emiOutput]);
   }
 
   // Attach brand pill events
