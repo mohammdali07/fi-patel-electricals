@@ -36,9 +36,9 @@ function initSolarCalculator() {
       if (billInput) billInput.value = 3500;
       applyPresetValues({
         kw: '3.24 kW',
-        totalCost: 155000,
+        totalCost: 158000,
         subsidy: 78000,
-        netCost: 77000,
+        netCost: 80000,
         savings: '₹3,500 / mo',
         roi: '~1.8 Years',
         roiPct: 88,
@@ -100,9 +100,9 @@ function initSolarCalculator() {
     if (monthlyBill === 3500 && currentBrand === 'adani') {
       applyPresetValues({
         kw: '3.24 kW',
-        totalCost: 155000,
+        totalCost: 158000,
         subsidy: 78000,
-        netCost: 77000,
+        netCost: 80000,
         savings: '₹3,500 / mo',
         roi: '~1.8 Years',
         roiPct: 88,
