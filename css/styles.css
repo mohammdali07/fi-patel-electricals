@@ -143,11 +143,11 @@ body { background: #fff; color: var(--secondary); line-height: 1.6; overflow-x: 
 
 /* 3D Scroll Reveal */
 .reveal-3d-scroll {
-  opacity: 0; transform: translateY(40px) rotateX(6deg) scale(0.96);
-  transition: opacity 0.8s cubic-bezier(0.2,0.8,0.2,1), transform 0.8s cubic-bezier(0.2,0.8,0.2,1);
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
   will-change: opacity, transform;
 }
-.reveal-3d-scroll.active { opacity: 1; transform: translateY(0) rotateX(0deg) scale(1); }
+.reveal-3d-scroll.active { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.15s; }
 .reveal-delay-2 { transition-delay: 0.3s; }
 .reveal-delay-3 { transition-delay: 0.45s; }

@@ -110,7 +110,7 @@ function initHeroSlideshow() {
 // 3D Scroll Reveal Animation Observer
 function init3DScrollObserver() {
   const elementsToAnimate = document.querySelectorAll(
-    '.team-contact-card, .gallery-card, .testimonial-card, .calc-card, .inquiry-box, .location-card, .video-frame-card'
+    '.reveal-3d-scroll, .why-card, .step-card, .team-contact-card, .testimonial-card, .calc-card, .inquiry-box, .location-card, .video-frame-card'
   );
 
   elementsToAnimate.forEach(el => el.classList.add('reveal-3d-scroll'));
@@ -122,8 +122,8 @@ function init3DScrollObserver() {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -30px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px 50px 0px'
   });
 
   elementsToAnimate.forEach(el => observer.observe(el));
