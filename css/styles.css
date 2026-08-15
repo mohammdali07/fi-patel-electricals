@@ -193,14 +193,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-logo-img {
-  height: 50px;
+  height: 65px;
   width: auto;
   display: block;
   transition: height 0.3s ease;
 }
 
 .navbar.scrolled .brand-logo-img {
-  height: 42px;
+  height: 52px;
 }
 
 .nav-menu {
@@ -560,7 +560,8 @@ h1, h2, h3, h4, h5, h6 {
 /* === STATS COUNTER BAR === */
 .stats-counter-bar {
   background: white;
-  border-y: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 40px 0;
   box-shadow: var(--shadow-sm);
 }
