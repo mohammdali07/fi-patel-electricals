@@ -197,10 +197,7 @@ function initHeroSlideshow() {
 const GALLERY_DATA = [
   { id: 0, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_47_10 AM.png", title: "High-Efficiency Mono PERC Installation", location: "Vasna, Gujarat", cat: "residential", catLabel: "Residential" },
   { id: 1, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_16 AM.png", title: "Heavy Galvanized Structure Mounting", location: "Kanai, Himmatnagar", cat: "mounting", catLabel: "Mounting" },
-  { id: 2, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_22 AM.png", title: "Commercial Complex Solar Array", location: "Kanai, Himmatnagar", cat: "commercial", catLabel: "Commercial" },
-  { id: 3, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_26 AM.png", title: "Industrial Power Generation Plant", location: "Kesharpura, Sabarkantha", cat: "commercial", catLabel: "Commercial" },
-  { id: 4, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_58_24 AM.png", title: "PM Surya Ghar Scheme Rooftop", location: "Palanpur, Sidhpur", cat: "residential", catLabel: "Residential" },
-  { id: 5, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 11_02_14 AM.png", title: "Complete Site Handover & Grid Sync", location: "Ilol, Himmatnagar", cat: "mounting", catLabel: "Mounting" }
+  { id: 2, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_26 AM.png", title: "Industrial Power Generation Plant", location: "Kesharpura, Sabarkantha", cat: "commercial", catLabel: "Commercial" }
 ];
 
 let activeFilteredList = [...GALLERY_DATA];
