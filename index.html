@@ -30,6 +30,63 @@
   
   <!-- Premium Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JSON-LD Structured Data Schema (LocalBusiness & Solar Product) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://fi-patel-electricals.vercel.app/#business",
+        "name": "Fi Patel Electricals",
+        "image": "https://fi-patel-electricals.vercel.app/assets/hero_slide_1.jpg",
+        "url": "https://fi-patel-electricals.vercel.app",
+        "telephone": "+919409264992",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Waywait Complex, RTO Chokdi",
+          "addressLocality": "Himmatnagar",
+          "addressRegion": "Gujarat",
+          "postalCode": "383001",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.5985,
+          "longitude": 72.9634
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "85"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Adani & Waaree Solar Rooftop System 3.24 kW",
+        "description": "PM Surya Ghar Govt Subsidy ₹78,000 applicable solar rooftop installation with 0 down payment easy bank loan EMI.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Adani Solar / WAAREE Solar / Citizen Solar"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "77000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -119,6 +176,9 @@
         <!-- Hero Slider with Touch Swipe & Enhanced Visual Effects -->
         <div class="hero-image-wrapper">
           <div class="hero-slider-wrapper" id="heroSliderWrapper">
+            <!-- Progress Bar Indicator -->
+            <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
+
             <!-- Glowing Stat Badge -->
             <div class="hero-photo-stat-pill">
               <span class="pulse-dot"></span>
@@ -374,6 +434,68 @@
         </form>
       </div>
     </div>
+  <!-- Why Choose Us Section -->
+  <section class="section-padding sectors-bg" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">THE FI PATEL ADVANTAGE</span>
+        <h2 class="section-title">Why Choose Fi Patel Electricals?</h2>
+        <p class="section-subtitle">Sabarkantha's most trusted solar installer with 200+ successful rooftops</p>
+      </div>
+      <div class="why-us-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>MNRE & GEDA Approved</h3>
+          <p>Authorized dealer for Adani, WAAREE & Citizen Solar panels with direct ₹78,000 Govt subsidy claim assistance.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>0 Down Payment EMI</h3>
+          <p>100% bank loan financing with 0 down payment and easy monthly installments starting at ₹1,500/mo.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <h3>48-Hour Rapid Installation</h3>
+          <p>Hot-dip galvanized structure mounting & net-metering documentation completed by expert engineers.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <h3>25-Year Panel Warranty</h3>
+          <p>Tier-1 Mono PERC high-efficiency panels backed by a 25-year performance warranty & local service support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works 3-Step Section -->
+  <section class="section-padding" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SIMPLE 3-STEP PROCESS</span>
+        <h2 class="section-title">How To Get Solar Rooftop</h2>
+        <p class="section-subtitle">From free site inspection to 0 electricity bill in 3 easy steps</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-badge">STEP 01</div>
+          <div class="step-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3>Free Site Inspection</h3>
+          <p>Our engineers measure your roof area, shade angles, and monthly power consumption for exact kW capacity.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">STEP 02</div>
+          <div class="step-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3>0 Down Payment Loan & Subsidy</h3>
+          <p>We process bank loan EMI approval and submit your PM Surya Ghar ₹78,000 Govt subsidy paperwork.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">STEP 03</div>
+          <div class="step-icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <h3>Setup & Net-Metering</h3>
+          <p>Certified structure mounting within 48 hours, DISCOM net-meter grid sync, and start generating free power!</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- 5. Media Showcase (Unique One-by-One Animated Photo Showcase) -->
@@ -389,6 +511,19 @@
       <div class="work-showcase-container" id="workShowcase">
         <!-- Progress Bar Indicator -->
         <div class="showcase-progress-bar"><div class="showcase-progress-fill" id="showcaseProgress"></div></div>
+
+        <!-- Navigation Arrow Buttons -->
+        <button class="showcase-arrow-btn prev" id="workPrevBtn" aria-label="Previous Project">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="showcase-arrow-btn next" id="workNextBtn" aria-label="Next Project">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Mobile Swipe Hint Badge -->
+        <div class="mobile-swipe-hint" id="mobileSwipeHint">
+          <i class="fa-solid fa-hand-pointer"></i> Swipe to explore
+        </div>
 
         <!-- Main Active Slide Display Stage -->
         <div class="work-stage" id="workStage">
@@ -551,6 +686,64 @@
               <strong>Sureshbhai Chaudhari</strong>
               <span>Agricultural Farm, Idar</span>
             </div>
+          </div>
+        </div>
+  <!-- FAQ Accordion Section -->
+  <section class="section-padding sectors-bg" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="section-title">Got Questions About Solar?</h2>
+        <p class="section-subtitle">Clear answers to help you choose the right solar rooftop system</p>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How much subsidy do I get under PM Surya Ghar Muft Bijli Yojana?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Under PM Surya Ghar scheme, Central Govt provides ₹30,000 for 1 kW, ₹60,000 for 2 kW, and up to ₹78,000 maximum cap for 3 kW and above solar rooftop systems directly credited to your bank account.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How does the 0 Down Payment bank loan work?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Nationalized & private banks offer 100% solar loan coverage with 0 down payment. The monthly EMI is usually lower than or equal to your monthly electricity bill savings!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How long does installation and net-metering take?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Our certified technicians complete structure mounting & panel installation within 48 hours. DISCOM net-meter inspection and grid synchronization is completed shortly after.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>What warranty do I get on solar rooftop panels?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Tier-1 Mono PERC solar panels from Adani, WAAREE, and Citizen Solar come with a 25-Year Performance Warranty and 10-Year product warranty.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Can solar panels generate power during rainy or cloudy days?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Modern Mono PERC panels generate power using ambient daylight even on overcast days. Net-metering grid connection ensures uninterrupted power supply 24x7.</p>
           </div>
         </div>
       </div>

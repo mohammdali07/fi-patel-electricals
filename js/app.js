@@ -19,8 +19,16 @@ function initHeroSlideshow() {
 
   if (!slides || slides.length === 0) return;
 
-  let currentIndex = 0;
-  let slideTimer = null;
+  const progressFill = document.getElementById('heroProgressFill');
+  let progressTimer = null;
+  let progressWidth = 0;
+  const SLIDE_DURATION = 3500;
+  const PROGRESS_INTERVAL = 50;
+
+  function resetProgressBar() {
+    progressWidth = 0;
+    if (progressFill) progressFill.style.width = '0%';
+  }
 
   function goToSlide(index) {
     slides.forEach(slide => slide.classList.remove('active'));
@@ -29,6 +37,7 @@ function initHeroSlideshow() {
     currentIndex = ((index % slides.length) + slides.length) % slides.length;
     slides[currentIndex].classList.add('active');
     if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+    resetProgressBar();
   }
 
   function nextSlide() { goToSlide(currentIndex + 1); }
@@ -36,10 +45,17 @@ function initHeroSlideshow() {
 
   function startAutoPlay() {
     stopAutoPlay();
-    slideTimer = setInterval(nextSlide, 3500);
+    progressTimer = setInterval(() => {
+      progressWidth += (PROGRESS_INTERVAL / SLIDE_DURATION) * 100;
+      if (progressFill) progressFill.style.width = Math.min(progressWidth, 100) + '%';
+      if (progressWidth >= 100) {
+        nextSlide();
+      }
+    }, PROGRESS_INTERVAL);
   }
+
   function stopAutoPlay() {
-    if (slideTimer) clearInterval(slideTimer);
+    if (progressTimer) clearInterval(progressTimer);
   }
 
   // Dot click handlers
@@ -344,6 +360,37 @@ function initScrollFeatures() {
   }
 }
 
+// FAQ Accordion Toggle Controller
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        // Close all items
+        faqItems.forEach(el => el.classList.remove('active'));
+        // If clicked item wasn't active, open it
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
+// Mobile Swipe Hint Auto Fade
+function initMobileSwipeHint() {
+  const hint = document.getElementById('mobileSwipeHint');
+  if (hint) {
+    setTimeout(() => {
+      hint.style.opacity = '0';
+      hint.style.transition = 'opacity 0.8s ease';
+      setTimeout(() => hint.remove(), 800);
+    }, 4500);
+  }
+}
+
 // Boot Application
 document.addEventListener('DOMContentLoaded', () => {
   initPageLoader();
@@ -353,6 +400,8 @@ document.addEventListener('DOMContentLoaded', () => {
   init3DScrollObserver();
   initMobileMenu();
   initInquiryForm();
+  initFaqAccordion();
+  initMobileSwipeHint();
   initScrollFeatures();
 });
 
