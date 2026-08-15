@@ -17,8 +17,7 @@ function initHeroSlideshow() {
   const dots = document.querySelectorAll('#sliderDotsBar .slider-dot');
   const wrapper = document.getElementById('heroSliderWrapper');
 
-  if (!slides || slides.length === 0) return;
-
+  let currentIndex = 0;
   const progressFill = document.getElementById('heroProgressFill');
   let progressTimer = null;
   let progressWidth = 0;
