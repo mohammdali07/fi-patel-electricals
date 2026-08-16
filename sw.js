@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fi-patel-solar-v13';
+const CACHE_NAME = 'fi-patel-solar-v14';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
