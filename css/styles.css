@@ -1895,6 +1895,27 @@ footer {
 
 .footer-logo-img { height: 50px; }
 
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(220, 39, 67, 0.3);
+  transition: var(--transition);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(220, 39, 67, 0.45);
+  color: white;
+}
+
 .footer-socials { display: flex; gap: 12px; margin-top: 16px; }
 .footer-socials a {
   width: 38px;
@@ -1906,6 +1927,13 @@ footer {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-socials a.insta-icon:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  transform: translateY(-3px);
 }
 
 .footer-col h4 { color: white; margin-bottom: 16px; font-size: 1.1rem; }
