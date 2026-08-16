@@ -196,9 +196,10 @@ function initHeroSlideshow() {
 
 const GALLERY_DATA = [
   { id: 0, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_47_10 AM.png", title: "High-Efficiency Mono PERC Installation", location: "Vasna, Gujarat", cat: "residential", catLabel: "Residential" },
-  { id: 1, src: "PRoject completed/project_prantij_himmatnagar.jpg", title: "Elevated Solar Panel Installation", location: "Prantij, Himmatnagar", cat: "residential", catLabel: "Residential" },
-  { id: 2, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_16 AM.png", title: "Heavy Galvanized Structure Mounting", location: "Kanai, Himmatnagar", cat: "mounting", catLabel: "Mounting" },
-  { id: 3, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_26 AM.png", title: "Industrial Power Generation Plant", location: "Kesharpura, Sabarkantha", cat: "commercial", catLabel: "Commercial" }
+  { id: 1, src: "PRoject completed/project_virpur_himmatnagar.jpg", title: "Rooftop Solar System Setup", location: "Virpur, Himmatnagar", cat: "residential", catLabel: "Residential" },
+  { id: 2, src: "PRoject completed/project_prantij_himmatnagar.jpg", title: "Elevated Solar Panel Installation", location: "Prantij, Himmatnagar", cat: "residential", catLabel: "Residential" },
+  { id: 3, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_16 AM.png", title: "Heavy Galvanized Structure Mounting", location: "Kanai, Himmatnagar", cat: "mounting", catLabel: "Mounting" },
+  { id: 4, src: "PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_26 AM.png", title: "Industrial Power Generation Plant", location: "Kesharpura, Sabarkantha", cat: "commercial", catLabel: "Commercial" }
 ];
 
 let activeFilteredList = [...GALLERY_DATA];
