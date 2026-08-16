@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fi-patel-solar-v12';
+const CACHE_NAME = 'fi-patel-solar-v13';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
@@ -21,7 +21,8 @@ const ASSETS_TO_CACHE = [
   'PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_16 AM.png',
   'PRoject completed/ChatGPT Image Aug 15, 2026, 10_56_26 AM.png',
   'PRoject completed/project_prantij_himmatnagar.jpg',
-  'PRoject completed/project_virpur_himmatnagar.jpg'
+  'PRoject completed/project_virpur_himmatnagar.jpg',
+  'PRoject completed/project_jadar_himmatnagar.jpg'
 ];
 
 self.addEventListener('install', (event) => {
